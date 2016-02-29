@@ -1,0 +1,106 @@
+* {
+	padding: 0;
+	margin: 0;
+	outline: none;
+	border: none;
+	list-style-type: none;
+	text-decoration: none;
+}
+body {
+	font-family: Calibri, sans-serif;
+}
+span#shadowbox {
+	position: absolute;
+	transition: ease-in-out .5s;
+}
+span#shadowbox.visible {
+	transition: ease-in-out .5s;
+	background: rgba(0,0,0,.7);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+nav {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+}
+nav button {
+	position: relative;
+	background: #99f;
+	width: 48px;
+	height: 48px;
+	padding: 8px;
+	left: 0px;
+	cursor: pointer;
+	transition: ease-in-out .3s;
+}
+nav button div {
+	background: #fff;
+	width: 100%;
+	height: 5px;
+	margin: 5px 0 0 ;
+	float: left;
+	border-radius: 9px;
+	transition: ease-in-out .12s;
+}
+nav button div:nth-child(3) {
+	margin: -5px 0 0 0;
+}
+nav button div:first-child {
+	margin: 0;
+}
+nav button.navOpen {
+	left: 250px;
+	background: #f33;
+	transition: ease-in-out .3s;
+}
+nav button.navOpen div {
+	width: 100%;
+	margin: 0;
+	transition: ease-in-out .3s;
+}
+nav button.navOpen div:nth-child(1), nav button.navOpen div:nth-child(4) {
+	background: transparent;
+}
+nav button.navOpen div:nth-child(2) {
+	transform: rotate(45deg);
+}
+nav button.navOpen div:nth-child(3) {
+	margin: -5px 0 0 0;
+	transform: rotate(-45deg);
+}
+nav ul#listMenu {
+	position: absolute;
+	background: #3c3c3c;
+	width: 250px;
+	top: 0;
+	bottom: 0;
+	left: -250px;
+	overflow: auto;
+	box-shadow: 0 0 10px 0px rgba(0,0,0,0);
+	transition: ease-in-out .3s;
+}
+nav ul#listMenu.listOpen {
+	left: 0px;
+	box-shadow: 0 0 10px 0px rgba(0,0,0,.5);
+	transition: ease-in-out .3s;		
+}
+nav ul#listMenu li {
+	width: 100%;
+	padding: 0 20px;
+	float: left;
+	box-sizing: border-box;
+}
+nav ul#listMenu li a {
+	width: 100%;
+	color: #fff;
+	padding: 20px 10px 10px 10px;
+	border-bottom: 1px solid #fff;
+	float: left;
+	box-sizing: border-box;
+}
+nav ul#listMenu li:last-child a {
+	border: none;
+}
